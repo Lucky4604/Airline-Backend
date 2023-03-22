@@ -4,6 +4,7 @@ const {PORT}=require('./config/serverConfig');
 const {City}=require('./models/index')
 
 
+
 const serversetup= async()=>{
     //create express object
     const app=express()

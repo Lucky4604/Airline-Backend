@@ -1,13 +1,13 @@
-const {cityRepository}=require('../repository/index')
+const {CityRepository}=require('../repository/index')
 
-class cityService{
+class CityService{
     constructor(){
-        this.cityRepository=new cityRepository();
+        this.CityRepository=new CityRepository();
     }
 
     async createCity(data){
         try {
-            const city=await this.cityRepository.createCity(data);
+            const city=await this.CityRepository.createCity(data);
             return city
             
         } catch (error) {
@@ -18,7 +18,7 @@ class cityService{
     }
     async deleteCity(cityId){
         try {
-            const response=this.cityRepository.deleteCity(cityId);
+            const response=this.CityRepository.deleteCity(cityId);
             return response
             
         } catch (error) {
@@ -30,7 +30,7 @@ class cityService{
     }
     async updateCity(cityId,data){
         try {
-            const city=await this.cityRepository.updateCity(cityId,data)
+            const city=await this.CityRepository.updateCity(cityId,data)
             return city;
             
         } catch (error) {
@@ -42,7 +42,7 @@ class cityService{
     }
     async getCity(cityId){
         try {
-            const city=await this.cityRepository.getCity(cityId)
+            const city=await this.CityRepository.getCity(cityId)
             return city;
             
         } catch (error) {
@@ -53,4 +53,4 @@ class cityService{
 
     }
 }
-module.exports=cityService
+module.exports=CityService
