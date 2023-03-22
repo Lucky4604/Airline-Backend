@@ -27,3 +27,5 @@ class cityRepository {
     }
 }
 
+module.exports=cityRepository;
+
