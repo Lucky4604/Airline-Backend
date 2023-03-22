@@ -1,3 +1,3 @@
 module.exports={
-    cityRepository:require('./city-repositry')
+    cityService:require('./city-repositry')
 }
